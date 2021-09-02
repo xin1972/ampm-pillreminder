@@ -1,0 +1,38 @@
+Toma
+
+    - date
+    - dosis: string
+    - medicamento
+    - confirmedDate: Date
+    - patient: Patient ID
+
+Patient
+    - ..datos personales
+
+User:
+    - datos..
+
+------
+
+Tarea periodica cada media hora:
+
+- obtener tomas con date < NOW y date < NOW - 2h, confirmedDate: null
+    - para cada toma => notificar SMS/correo url: https://xxx.com/tomas/sadasdsadasdsadsad/confirm
+
+------
+
+POST /users -> registrar usuario
+POST /login
+POST /logout
+
+POST /patients -> crear paciente
+GET /patients -> obtener pacientes de usuario
+DELETe /patients/:id
+PATCH /patients/:id 
+GET /patients/:id
+
+DELETE /patients/:id/tomas -> borrar todas las tomas de un paciente
+POST /tomas -> crear toma
+GET /patients/:id/tomas
+DELETE /tomas/:id
+GET /tomas/:id/confirm => confirmar toma (se manda enlace por sms)
